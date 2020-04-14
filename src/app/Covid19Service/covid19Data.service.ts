@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class FectchDataService {
+export class Covid19DataService {
 
   constructor(private http: HttpClient) { }
 

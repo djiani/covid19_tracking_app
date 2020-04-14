@@ -1,0 +1,15 @@
+.left-Nav{
+  width: 20%;
+  height: 100%;
+  padding: 20px;
+  display: inline-block;
+
+
+}
+
+.mainContent{
+  display: inline-block;
+  width: 80%;
+  padding: 20%;
+  border-left: 2px solid black;
+}

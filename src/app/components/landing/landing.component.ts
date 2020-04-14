@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FectchDataService } from 'src/app/fectch-data.service';
+import { Covid19DataService } from 'src/app/Covid19Service/covid19Data.service';
 
 @Component({
   selector: 'app-landing',
@@ -7,15 +7,11 @@ import { FectchDataService } from 'src/app/fectch-data.service';
   styleUrls: ['./landing.component.css']
 })
 export class LandingComponent implements OnInit {
-  data:any;
-  constructor(private fectchDataService: FectchDataService) { }
+
+  constructor() { }
 
   ngOnInit() {
-    this.fectchDataService.getStatsWorldWide()
-    .subscribe( data => {
-      console.log(data);
-      data = data;
-    });
+
   }
 
 }

@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { FectchDataService } from './fectch-data.service';
+import { Covid19DataService } from './covid19Data.service';
 
 describe('FectchDataService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: FectchDataService = TestBed.get(FectchDataService);
+    const service: Covid19DataService = TestBed.get(Covid19DataService);
     expect(service).toBeTruthy();
   });
 });

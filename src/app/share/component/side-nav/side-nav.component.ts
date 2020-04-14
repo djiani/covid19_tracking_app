@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Covid19DataService } from 'src/app/Covid19Service/covid19Data.service';
 
 @Component({
   selector: 'app-side-nav',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SideNavComponent implements OnInit {
 
-  constructor() { }
+  data:any;
+  today: number = Date.now();
+  constructor(private covid19DataService: Covid19DataService ) { }
 
   ngOnInit() {
+    this.covid19DataService.getStatsWorldWide()
+    .subscribe( data => {
+      console.log(data);
+      data = data;
+    });
+
   }
 
 }
