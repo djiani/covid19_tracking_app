@@ -1,34 +1,27 @@
-<div>
-  <h6>WorldWide</h6>
-  <span>{{today | date}} time ago</span>
+<div *ngIf="covid19Data">
+<div class= "card">
+  <div class="card-header">
+    <h6>WorldWide  Today Statics</h6>
+    <p>{{(covid19Data.updated | date) }} </p>
+  </div>
+  <div class="card-body">
+    <p> Comfirms cases: <span>+{{covid19Data.todayCases}}</span></p>
+    <p>Deaths: <span>+{{covid19Data.todayDeaths}}</span></p>
+  </div>
 </div>
 <hr>
-<div>
-  <table class="table table-hover">
-    <thead>
-      <tr>
-        <th>Comfirms</th>
-        <th>Recover</th>
-        <th>Deaths</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-      </tr>
-    </tbody>
-  </table>
+<div class= "card">
+  <div class="card-header">
+    <h6>WorldWide Total Statics</h6>
+  </div>
+  <div class="card-body">
+    <p> Comfims cases: <span>+{{covid19Data.todayCases}}</span></p>
+    <p>deaths: <span>+{{covid19Data.todayDeaths}}</span></p>
+    <p>Recovered <span>{{covid19Data.recovered}}</span></p>
+    <p>Crtical <span>{{covid19Data.criticla}}</span></p>
+    <p>Active <span>{{covid19Data.active}}</span></p>
+    <p>Test <span>{{covid19Data.tests}}</span></p>
+  </div>
 </div>
 
+</div>
