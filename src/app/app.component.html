@@ -1,17 +1,5 @@
-<h1> {{title}}</h1>
-<button type="button" class="btn btn-primary">Primary</button>
+<app-header></app-header>
+<app-side-nav></app-side-nav>
 <router-outlet></router-outlet>
+<app-footer></app-footer>
 
-<div class="btn-group btn-group-toggle">
-  <label class="btn-primary" ngbButtonLabel>
-    <input type="checkbox" ngbButton [(ngModel)]="model.left"> Left (pre-checked)
-  </label>
-  <label class="btn-primary" ngbButtonLabel>
-    <input type="checkbox" ngbButton [(ngModel)]="model.middle"> Middle
-  </label>
-  <label class="btn-primary" ngbButtonLabel>
-    <input type="checkbox" ngbButton [(ngModel)]="model.right"> Right
-  </label>
-</div>
-<hr>
-<pre>{{model | json}}</pre>

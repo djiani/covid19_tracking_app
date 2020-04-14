@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LandingComponent } from './components/landing/landing.component';
 import { FormsModule } from '@angular/forms';
+import { SharedModule } from './share/shared/shared.module';
 
 
 
@@ -25,6 +26,7 @@ const routes: Routes = [
     NgbModule,
     FormsModule,
     HttpClientModule,
+    SharedModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
