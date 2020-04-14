@@ -4,15 +4,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatButtonModule} from '@angular/material/button';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LandingComponent } from './components/landing/landing.component';
+import { FormsModule } from '@angular/forms';
 
 
 
 const routes: Routes = [
-  {path: '', component: AppComponent},
-  {path: 'test', component: LandingComponent}
+  {path: '', component: LandingComponent}
 ];
 
 @NgModule({
@@ -23,9 +22,9 @@ const routes: Routes = [
   imports: [
     RouterModule.forRoot(routes),
     BrowserModule,
-    BrowserAnimationsModule,
-    MatButtonModule,
-    HttpClientModule
+    NgbModule,
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
